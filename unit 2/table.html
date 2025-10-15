@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML table</title>
+</head>
+<body>
+    <h2 align="center ">TABLES IN HTML</h2>
+    <br>
+    <h3>Table example 1</h3>
+    <table border="1" cellspacing="1" width="90%" align="center" cellpadding="0"> 
+        <!--border is for outside border only 
+            cellspacing is for spaces between cells 
+            width is for table width
+            cellpadding is for cell size vertically-->
+        <tr align="center">
+            <th>S. no.</th>
+            <th>name </th>
+            <th>mob</th>
+            <th>brach</th>
+        </tr>
+        <tr>
+            <td>01</th>
+            <td>gauri</td>
+            <td>7906450559</td>
+            <td rowspan="2">cse</td> <!--rowspan is for merging row cells-->
+        </tr>
+        <tr>
+            <td>02</th>
+            <td>gunjan</td>
+            <td>1234567890</td>
+            <!-- <td>cse</td> -->
+        </tr>
+        <tr>
+            <td>03</th>
+            <td>garima</td>
+            <td>1547425789</td>
+            <td>aiml</td>
+        </tr>
+    </table>
+    <br><br>
+    <h3>Table example 2</h3>
+    <table  border="1" cellspacing="1" width="50%" align="left" cellpadding="0">
+        <tr align="center">
+            <td>Column 1</td>
+            <td>Column 2</td>
+            <td>Column 3</td>
+        </tr>
+        <tr align="center">
+            <td rowspan="2">Row 1 Cell 1</td>
+            <td>Row 1 Cell 2</td>
+            <td>Row 1 Cell 3</td>
+        </tr>
+        <tr align="center">
+            <td>Row 2 Cell 2</td>
+            <td>Row 2 Cell 3</td>
+        </tr>
+        <tr align="center">
+            <td colspan="2">Row 3 Cell 1</td>
+            <td>Row 3 Cell 3</td>
+        </tr> 
+    </table>
+    <br><br><br><br><br><br>
+    <table  border="1" cellspacing="0" width="100%" align="center" cellpadding="0">
+        <tr>
+            <th rowspan="2">TIME/DAY</th>
+            <th>I</th>
+            <th>II</th>
+            <th>III</th>
+            <th>IV</th>
+            <th>V</th>
+            <th>VI</th>
+            <th>VII</th>
+            <th>VIII</th>
+            <th>IX</th>
+        </tr>
+        <tr>
+            <th>08.50-09.40</th>
+            <th>09.40-10.30</th>
+            <th>10.40-11.30</th>
+            <th>11.30-12.20</th>
+            <th>12.20-01.10</th>
+            <th>01.10-02.00</th>
+            <th>02.00-02.50</th>
+            <th>02.50-03.40</th>
+            <th>03.40-04.30</th>
+        </tr>
+        <tr align="center">
+            <td>Monday</td>
+            <td><pre>
+25AS101
+(AG)
+BH-309
+            </pre></td>
+
+            <td><pre>
+25AS102
+(AA)
+BH-309
+            </pre></td>
+
+            <td colspan="2""><pre>
+25AS151
+(AG,AKP)
+KC 310
+            </pre></td>
+        </tr>
+
+    </table>
+</body>
+</html>

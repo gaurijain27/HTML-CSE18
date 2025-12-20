@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMAZON</title>
+    <style>
+        html,*{
+            margin: 0;
+            padding: 10px;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            background: white;
+            color: black;
+            padding: 5px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+        }
+        .logo {
+            font-size: 55px;
+            font-family: 'Brush Script MT', cursive;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        .nav-links a {
+            color: black;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .icons a {
+            color: black;
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .menu-icon {
+            font-size: 28px;
+            cursor: pointer;
+            display: none;
+        }
+        .mobile-menu {
+            display: none;
+            background: #000000;
+            text-align: center;
+            padding: 20px 0;
+            border-radius: 5px;
+        }
+        .mobile-menu a {
+            display: block;
+            padding: 12px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .mobile-menu a:hover {
+            background: #000000;
+        }
+       
+        .vertical{
+            display: grid;
+            padding: 15px;
+            height: auto;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.986);
+            row-gap: 15px;
+            column-gap: 15px;
+            border-radius: 10px;
+            grid-template-columns: repeat(3,1fr);
+            font-family: 'lucida handwriting', cursive;
+            font-weight: bold;
+            font-size: 13px;
+        }
+        .horizontal{
+            display: grid;
+            font-size: 13px;
+            padding: 15px;
+            height: auto;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.986);
+            row-gap: 15px;
+            column-gap: 15px;
+            border-radius: 10px;
+            grid-template-columns: repeat(4,1fr);
+            font-family: 'lucida handwriting', cursive;
+            font-weight: bold;
+        }
+        .card{
+            background-color: white;
+            display: grid;
+            height: auto;
+            width: 100%;
+            border-radius: 10px;
+            text-align: center;
+            place-items: center;
+        }
+
+        .card img{
+            height: 200px;
+            width: 150px;
+            border: black solid;
+            border-radius: 30px;
+            padding: 0;
+        }
+
+         .button{
+            background-color: rgb(88, 124, 99);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            width: 80%;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+        }   
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .menu-icon {
+                display: block;
+            }
+        }
+        @media (max-width: 1024px) { 
+      .vertical { 
+        grid-template-columns: repeat(2, 2fr); 
+      } 
+      .horizontal { 
+        grid-template-columns: repeat(2, 2fr); 
+      } 
+    } 
+    @media (max-width: 600px) { 
+      .vertical { 
+        grid-template-columns: 1fr;
+      } 
+      .horizontal { 
+        grid-template-columns: 1fr;
+      } 
+    } 
+    </style>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("mobileMenu");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</head>
+<body style="background-color: rgb(1, 41, 13);">
+    <div class="navbar">
+        <div class="logo">iredexa</div>
+
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+
+        <div class="nav-links">
+        <a href="./homepage.html">Home</a>
+        <a href="#books">Books</a>
+        <a href="#stationary">Stationary</a>
+        <a href="#gifts">Gifts</a>
+        </div>
+
+        <div class="icons">
+            <a href="#">Cart &#128722</a>
+            <a href="#">Login</a>
+        </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="./homepage.html">Home</a>
+        <a href="#books">Books</a>
+        <a href="#stationary">Stationary</a>
+        <a href="#gifts">Gifts</a>
+    </div>
+<br><br>
+<div class="horizontal" id="home">
+            <div class="card">
+                <img src="./hp home1.jpg" alt="HP WALL DECOR">
+                <br>HARRY POTTER THEMED PLASTIC WALL HANGING 
+                <br><span style="color: rgb(67, 1, 153);">&#8377 329</span>
+                <br><div class="button"><b>ADD TO CART</b></div>
+            </div>
+            <div class="card">
+                <img src="./hp home2.jpg" alt="HP WALL DECOR">
+                <br>HARRY POTTER THEMED WOODEN WALL HANGING 
+                <br><span style="color: rgb(67, 1, 153);">&#8377 329</span>
+                <br><div class="button"><b>ADD TO CART</b></div>
+            </div>
+            <div class="card">
+                <img src="./hp home3.jpg" alt="HP WALL DECOR">
+                <br>HARRY POTTER THEMED BEDSHEET (single bed) 
+                <br><span style="color: rgb(67, 1, 153);">&#8377 329</span>
+                <br><div class="button"><b>ADD TO CART</b></div>
+            </div>
+            <div class="card">
+                <img src="./hp home4.jpg" alt="HP WALL DECOR">
+                <br>HARRY POTTER THEMED ROOM WALLPAPER
+                <br><span style="color: rgb(67, 1, 153);">&#8377 329</span>
+                <br><div class="button"><b>ADD TO CART</b></div>
+            </div>
+        </div>
+        <br><br>
+        <div class="vertical" id="books">
+            <div class="card"><img src="./hp1.jpg" alt="HARRY POTTER AND THE PHILOSOPHER'S STONE">
+                <br>HARRY POTTER AND THE PHILOSOPHER'S STONE
+                <br><span style="color: rgb(67, 1, 153);">&#8377 499</span>
+                <br><div class="button"><b>ADD TO CART</b></div>
+            </div>
+            <div class="card"><img src="./hp2.jpg" alt="HARRY POTTER AND THE CHAMBER OF SECRETS">
+                <br>HARRY POTTER AND THE CHAMBER OF SECRETS
+                <br><span style="color: rgb(67, 1, 153);">&#8377 583</span>
+                <br><div class="button"><b>ADD TO CART</b></div>
+            </div>
+            <div class="card"><img src="./hp3.jpg" alt="HARRY POTTER AND THE PRISONER OF AZKABAN">
+                <br>HARRY POTTER AND THE PRISONER OF AZKABAN
+                <br><span style="color: rgb(67, 1, 153);">&#8377 431</span>
+                <br><div class="button"><b>ADD TO CART</b></div>
+            </div>
+            <div class="card"><img src="./hp4.jpg" alt="HARRY POTTER AND THE GOBLET OF FIRE">
+                <br>HARRY POTTER AND THE GOBLET OF FIRE
+                <br><span style="color: rgb(67, 1, 153);">&#8377 653</span>
+                <br><div class="button"><b>ADD TO CART</b></div>
+            </div>
+            <div class="card"><img src="./hp6.jpg" alt="HARRY POTTER AND THE HALF BLOOD PRINCE">
+                <br>HARRY POTTER AND THE HALF BLOOD PRINCE
+                <br><span style="color: rgb(67, 1, 153);">&#8377 799</span>
+                <br><div class="button"><b>ADD TO CART</b></div>
+            </div>
+            <div class="card"><img src="./hp7.jpg" alt="HARRY POTTER AND THE DEATHLY HALLOWS">
+                <br>HARRY POTTER AND THE DEATHLY HALLOWS
+                <br><span style="color: rgb(67, 1, 153);">&#8377 757</span>
+                <br><div class="button"><b>ADD TO CART</b></div>
+            </div>
+        </div>
+        
+</body>
+</html>

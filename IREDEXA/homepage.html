@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMAZON</title>
+    <title>iredexa</title>
     <style>
         html,*{
             margin: 0;
             padding: 10px;
             box-sizing: border-box;
             scroll-behavior: smooth;
+        }
+
+        body{
+            background: linear-gradient(to bottom, #84bb76,#5a994b, #1a5a01,#5a994b, #84bb76);
         }
 
         .navbar {
@@ -62,43 +66,52 @@
         .mobile-menu a:hover {
             background: #000000;
         }
-       
+
+        .banner{
+            padding: 10px;
+        }
+
+        .banner img{
+            padding: 0;
+            height: 190px;
+            width: 99.75%;
+            align-items: center;
+        }
         .vertical{
             display: grid;
-            padding: 15px;
+            padding: 10px;
             height: auto;
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.986);
-            row-gap: 15px;
-            column-gap: 15px;
-            border-radius: 10px;
-            grid-template-columns: repeat(3,1fr);
-            font-family: 'lucida handwriting', cursive;
-            font-weight: bold;
-            font-size: 13px;
-        }
-        .horizontal{
-            display: grid;
-            font-size: 13px;
-            padding: 15px;
-            height: auto;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.986);
-            row-gap: 15px;
-            column-gap: 15px;
+            row-gap: 20px;
+            column-gap: 20px;
             border-radius: 10px;
             grid-template-columns: repeat(4,1fr);
             font-family: 'lucida handwriting', cursive;
             font-weight: bold;
+            font-size: 10px;
+        }
+        .horizontal{
+            display: grid;
+            font-size: 10px;
+            padding: 15px;
+            height: auto;
+            width: 100%;
+            row-gap: 20px;
+            column-gap: 20px;
+            border-radius: 10px;
+            grid-template-columns: repeat(5,1fr);
+            font-family: 'lucida handwriting', cursive;
+            font-weight: bold;
         }
         .card{
-            background-color: white;
+            background-color: rgb(255, 255, 255);
             display: grid;
             height: auto;
             width: 100%;
             border-radius: 10px;
             text-align: center;
             place-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card img{
@@ -119,6 +132,26 @@
             text-align: center;
         }   
 
+        .button a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .blocks .vertical{
+            grid-template-columns: repeat(6,1fr);
+            row-gap: 20px;
+            column-gap: 20px;
+        }
+        .blocks .vertical .card{
+            border-radius: 5px;
+        }
+         .blocks img{
+            height: 120px;
+         }
+
+        span{
+            color: rgb(67, 1, 153);
+        }
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -134,6 +167,12 @@
       .horizontal { 
         grid-template-columns: repeat(2, 2fr); 
       } 
+      .blocks .vertical{ 
+        grid-template-columns: repeat(2, 2fr); 
+      } 
+      .blocks .horizontal{ 
+        grid-template-columns: repeat(2, 2fr); 
+      } 
     } 
     @media (max-width: 600px) { 
       .vertical { 
@@ -141,8 +180,24 @@
       } 
       .horizontal { 
         grid-template-columns: 1fr;
+      }
+      .blocks .vertical { 
+        grid-template-columns: 1fr;
+      } 
+      .blocks .horizontal { 
+        grid-template-columns: 1fr;
       } 
     } 
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgb(0, 37, 8);
+    }
+    
+    footer{
+        background: linear-gradient(to top, #1a5a01, #84bb76,#5a994b, #1a5a01);
+        text-align: center;
+    }
     </style>
     <script>
         function toggleMenu() {
@@ -151,7 +206,7 @@
         }
     </script>
 </head>
-<body style="background-color: rgb(1, 41, 13);">
+<body>
     <div class="navbar">
         <div class="logo">iredexa</div>
 
@@ -159,6 +214,7 @@
 
         <div class="nav-links">
         <a href="./homepage.html">Home</a>
+        <a href="#home">Housing</a>
         <a href="#books">Books</a>
         <a href="#stationary">Stationary</a>
         <a href="#gifts">Gifts</a>
@@ -172,70 +228,119 @@
 
     <div class="mobile-menu" id="mobileMenu">
         <a href="./homepage.html">Home</a>
+        <a href="#home">Housing</a>
         <a href="#books">Books</a>
         <a href="#stationary">Stationary</a>
         <a href="#gifts">Gifts</a>
     </div>
 <br><br>
+<div class="banner">
+    <img src="./banner1.jpg"></div>
 <div class="horizontal" id="home">
             <div class="card">
                 <img src="./hp home1.jpg" alt="HP WALL DECOR">
-                <br>HARRY POTTER THEMED PLASTIC WALL HANGING 
-                <br><span style="color: rgb(67, 1, 153);">&#8377 329</span>
-                <br><div class="button"><b>ADD TO CART</b></div>
+                <br> PLASTIC WALL HANGING 
+                <br><span  >&#8377 299</span>
+                <div class="button"><b>ADD TO CART</b></div>
             </div>
             <div class="card">
                 <img src="./hp home2.jpg" alt="HP WALL DECOR">
-                <br>HARRY POTTER THEMED WOODEN WALL HANGING 
-                <br><span style="color: rgb(67, 1, 153);">&#8377 329</span>
-                <br><div class="button"><b>ADD TO CART</b></div>
+                <br> WOODEN WALL HANGING 
+                <br><span  >&#8377 349</span>
+                <div class="button"><b>ADD TO CART</b></div>
             </div>
             <div class="card">
                 <img src="./hp home3.jpg" alt="HP WALL DECOR">
-                <br>HARRY POTTER THEMED BEDSHEET (single bed) 
-                <br><span style="color: rgb(67, 1, 153);">&#8377 329</span>
-                <br><div class="button"><b>ADD TO CART</b></div>
+                <br> BEDSHEET (single bed) 
+                <br><span  >&#8377 399</span>
+                <div class="button"><b>ADD TO CART</b></div>
             </div>
             <div class="card">
                 <img src="./hp home4.jpg" alt="HP WALL DECOR">
-                <br>HARRY POTTER THEMED ROOM WALLPAPER
-                <br><span style="color: rgb(67, 1, 153);">&#8377 329</span>
-                <br><div class="button"><b>ADD TO CART</b></div>
+                <br> ROOM WALLPAPER
+                <br><span  >&#8377 1999</span>
+                <div class="button"><b>ADD TO CART</b></div>
+            </div>
+            <div class="card" style="display:grid; align-content: center;">
+                Into home decor? <br>Wanna give your home a fresh look?<br>
+                Check out our latest arrivals <br><br>
+                &rarr;HERE&larr;</div>
             </div>
         </div>
         <br><br>
         <div class="vertical" id="books">
             <div class="card"><img src="./hp1.jpg" alt="HARRY POTTER AND THE PHILOSOPHER'S STONE">
                 <br>HARRY POTTER AND THE PHILOSOPHER'S STONE
-                <br><span style="color: rgb(67, 1, 153);">&#8377 499</span>
-                <br><div class="button"><b>ADD TO CART</b></div>
+                <br><span  >&#8377 499</span>
+                 <div class="button"><b>ADD TO CART</b></div>
             </div>
             <div class="card"><img src="./hp2.jpg" alt="HARRY POTTER AND THE CHAMBER OF SECRETS">
                 <br>HARRY POTTER AND THE CHAMBER OF SECRETS
-                <br><span style="color: rgb(67, 1, 153);">&#8377 583</span>
-                <br><div class="button"><b>ADD TO CART</b></div>
+                <br><span  >&#8377 583</span>
+                 <div class="button"><b>ADD TO CART</b></div>
             </div>
             <div class="card"><img src="./hp3.jpg" alt="HARRY POTTER AND THE PRISONER OF AZKABAN">
                 <br>HARRY POTTER AND THE PRISONER OF AZKABAN
-                <br><span style="color: rgb(67, 1, 153);">&#8377 431</span>
-                <br><div class="button"><b>ADD TO CART</b></div>
+                <br><span  >&#8377 431</span>
+                 <div class="button"><b>ADD TO CART</b></div>
             </div>
             <div class="card"><img src="./hp4.jpg" alt="HARRY POTTER AND THE GOBLET OF FIRE">
                 <br>HARRY POTTER AND THE GOBLET OF FIRE
-                <br><span style="color: rgb(67, 1, 153);">&#8377 653</span>
-                <br><div class="button"><b>ADD TO CART</b></div>
+                <br><span  >&#8377 653</span>
+                 <div class="button"><b>ADD TO CART</b></div>
             </div>
             <div class="card"><img src="./hp6.jpg" alt="HARRY POTTER AND THE HALF BLOOD PRINCE">
                 <br>HARRY POTTER AND THE HALF BLOOD PRINCE
-                <br><span style="color: rgb(67, 1, 153);">&#8377 799</span>
-                <br><div class="button"><b>ADD TO CART</b></div>
+                <br><span  >&#8377 799</span>
+                 <div class="button"><b>ADD TO CART</b></div>
             </div>
             <div class="card"><img src="./hp7.jpg" alt="HARRY POTTER AND THE DEATHLY HALLOWS">
                 <br>HARRY POTTER AND THE DEATHLY HALLOWS
-                <br><span style="color: rgb(67, 1, 153);">&#8377 757</span>
-                <br><div class="button"><b>ADD TO CART</b></div>
+                <br><span  >&#8377 757</span>
+                 <div class="button"><b>ADD TO CART</b></div>
+            </div>
+            <div class="card"><img src="./hp5.jpg" alt="HARRY POTTER AND THE ORDER OF THE PHEONIX">
+                <br>HARRY POTTER AND THE ORDER OF THE PHEONIX
+                <br><span  >&#8377 757</span>
+                <div class="button"><b>ADD TO CART</b></div>
+            </div>
+            <div class="card">Tired of reality?<br>Submerge into the realm of books<br>that help you escape<br>&rarr;HERE&larr;
             </div>
         </div>
+        <br><br>
+    <div class="blocks" id="stationary">
+        <div class="vertical">
+            <div class="card"><img src="hp stnry 1.jpg"><br>
+            Book marks (set of 5)<span>&#8377 150</span>
+        <div class="button"><b>ADD TO CART</b></div></div>
+            <div class="card"><img src="hp stnry 2.jpg"><br>
+            Hard board diary<span>&#8377 150</span>
+        <div class="button"><b>ADD TO CART</b></div></div>
+            <div class="card"><img src="hp stnry 3.jpg"><br>
+            Book marks<br>(set of 5)<span>&#8377 150</span>
+        <div class="button"><b>ADD TO CART</b></div></div>
+            <div class="card"><img src="hp stnry 4.jpg"><br>
+            Book marks<br>(set of 5)<span>&#8377 150</span>
+        <div class="button"><b>ADD TO CART</b></div></div>
+            <div class="card"><img src="hp stnry 5.jpg"><br>
+            Book marks<br>(set of 5)<span>&#8377 150</span>
+        <div class="button"><b>ADD TO CART</b></div></div>
+            <div class="card">Discover more stationary items <br>&rarr;HERE&larr;</div>
+        </div><br><br>
+        <div class="horizontal" id="gifts">
+            <div class="card"><img src="hp gift 1.jpg"><br>Gift box<br>(15 items)<br><span>&#8377 1600</span><div class="button"><b>ADD TO CART</b></div></div>
+            <div class="card"><img src="hp gift 2.jpeg"><br>Wand set<br>(4 wands - customisable)<br><span>&#8377 1899</span>
+        <div class="button"><b>ADD TO CART</b></div></div>
+            <div class="card"><img src="hp gift 3.jpg"><br>Journaling Diary<br><span>&#8377 1299</span>
+        <div class="button"><b>ADD TO CART</b></div></div>
+            <div class="card"><img src="hp gift 4.jpg"><br>Goody bag<br>(8 items)<br><span>&#8377 2600</span><div class="button"><b>ADD TO CART</b></div></div>
+            <div class="card">Looking for the perfect gift?<br>Dive into more choices here<br>&rarr;HERE&larr;</div>
+        </div>
+    </div>
+    <br><br><br>
+    <footer>
+        &copy;2025iredexa
+    </footer>
         
 </body>
 </html>
